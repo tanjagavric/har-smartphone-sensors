@@ -27,6 +27,16 @@ The dataset contains smartphone sensor measurements for six activities:
 
 ## Methodology
 
+### Data distribution
+
+The data from 30 volunteers has been randomly split into **training and test** sets. As shown in the figure, approximately $70\%$ of the data has been assigned to the training set and $30\%$ to the test set. For **validation** purposes, $20\%$ of the training data has been randomly selected. 
+![train_test_ratio](images/train_test_size_ratio.png)
+
+The features are normalized and bounded within the interval $[-1, 1]$, as stated in the dataset description. Therefore, no additional standardization is required. The dataset contains no duplicate or missing values in either the training or the test set.
+
+The **classes** are nearly balanced, with only minor variations. We would expect the same number of instances for the **WALKING_UPSTAIRS** and **WALKING_DOWNSTAIRS** classes, but there is a slight difference. One possible explanation is that it took the volunteers more time to climb upstairs than to descend, resulting in more sensor readings being recorded for the WALKING_UPSTAIRS class.
+![class_distribution](images/class_distribution.png)
+
 <!-- TODO Describe data analysis, preprocessing, train-validation-test split, models and hyperparameter selection -->
 
 ## Results
